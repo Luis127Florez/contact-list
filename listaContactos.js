@@ -2,7 +2,7 @@
 let verificacion = true;
 let numero = 0 ;
 let i = 5 ;
-let contactosAmostrar = "";
+//let contactosAmostrar = "";
 let items = 0;
 let fin = "";
 
@@ -28,7 +28,7 @@ do {
         }else{
             verificacion = true ;
             numero = parseInt(acccion);
-            if (numero > 3 || numero < 1) {
+            if (numero > 3 || numero < 1 ||numero.value == undefined) {
                 verificacion = false;
             }
             
@@ -76,15 +76,16 @@ function modificar(contactoModificar, newcontac) {
 }
             
 function mostarlista() {
-    contactosAmostrar = "";
-    items = Object.getOwnPropertyNames(listaContactos);
+/*  contactosAmostrar = "";
+    items = Object.values(listaContactos);
 
-    for (let i = 1; i < items.length + 1 ; i++) {
+    for (let i = 1; i < items.length + 1; i++) {
         if(listaContactos["Contacto"+i] != undefined ){
             contactosAmostrar += listaContactos["Contacto"+i]+" \n";
         }
                            
     } 
-    alert(contactosAmostrar);
+    alert(contactosAmostrar); */
+    console.log(listaContactos)
 }
             
