@@ -25,15 +25,17 @@ do {
         acccion = prompt("Accion,\ningrese el numero 1 para guardar,\ningrese el numero 2 para eliminar,\ningrese el numero 3 para Modificar", "");
         if (isNaN(acccion)) {
             verificacion = false;
+
         }else{
             verificacion = true ;
+
             numero = parseInt(acccion);
-            if (numero > 3 || numero < 1 ||numero.value == undefined) {
+            if (numero > 3 || numero < 1) {
                 verificacion = false;
             }
             
         }
-    } while (verificacion);
+    } while (!verificacion);
 
     let contacto = "";
     let newcontacto = "";
