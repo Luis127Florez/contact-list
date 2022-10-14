@@ -1,4 +1,4 @@
-/*let acccion = "";*/
+let acccion = "";
 let verificacion = true;
 let numero = 0 ;
 let i = 5 ;
@@ -33,7 +33,7 @@ do {
             }
             
         }
-    } while (!verificacion);
+    } while (verificacion);
 
     let contacto = "";
     let newcontacto = "";
