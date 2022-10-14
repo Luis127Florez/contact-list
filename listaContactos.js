@@ -25,12 +25,12 @@ do {
         acccion = prompt("Accion,\ningrese el numero 1 para guardar,\ningrese el numero 2 para eliminar,\ningrese el numero 3 para Modificar", "");
         if (isNaN(acccion)) {
             verificacion = false;
-
+            
         }else{
             verificacion = true ;
 
             numero = parseInt(acccion);
-            if (numero > 3 || numero < 1) {
+            if (numero > 3 || numero < 1 || acccion == "") {
                 verificacion = false;
             }
             
