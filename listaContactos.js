@@ -78,7 +78,7 @@ function modificar(contactoModificar, newcontac) {
 }
             
 function mostarlista() {
-/*  contactosAmostrar = "";
+ contactosAmostrar = "";
     items = Object.values(listaContactos);
 
     for (let i = 1; i < items.length + 1; i++) {
@@ -87,7 +87,7 @@ function mostarlista() {
         }
                            
     } 
-    alert(contactosAmostrar); */
+    alert(contactosAmostrar);
     console.log(listaContactos)
 }
             
