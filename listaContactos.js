@@ -8,10 +8,16 @@ let fin = "";
 
 
 const listaContactos = {
-    Contacto1 : "Luis antonio",
-    Contacto2 : "Robert guerra",
-    Contacto3 : "Jose Najera",
-    Contacto4 : "Luis Hernandez Goenaga"
+    Contacto1 : {nombre: "Luis antonio",
+                 apellidos: "florez gil",
+                 telefono: 2323782325,
+                 ubicacion:{ciudad: "barranquilla",
+                            direccion:"kr 6 Dg76 F17 C1" }},
+    Contacto2: {nombre: "franco ",
+                apellidos: "perez",
+                telefono: 746327453,
+                ubicacion:{ciudad: "Ballunca",
+                           direccion:"cuarta colina" }}
 }
 
 mostarlista();
@@ -42,8 +48,13 @@ do {
     
     switch (numero) {
         case 1:
-            contacto = prompt("ingrese el contacto que desea Agregar");
-            guardar(contacto);    
+            nombreContacto = prompt("ingrese el nombre del contacto que desea Agregar");
+            apellidoContacto = prompt("ingrese el apellido del contacto que desea Agregar");
+            teléfonoContacto = prompt("ingrese el teléfono del contacto que desea Agregar");
+            ciudadContacto = prompt("ingrese la ciudad del contacto que desea Agregar");
+            direccionContacto = prompt("ingrese las ubicaciones del contacto que desea Agregar");
+            
+            guardar(nombreContacto, apellidoContacto, teléfonoContacto, ciudadContacto, direccionContacto);    
             break;
         case 2:
             contacto = prompt("ingrese el contacto que desea Eliminar");
@@ -61,8 +72,8 @@ do {
 } while (fin != 'si' );
             
 
-function guardar (contactoGuardar) {
-    listaContactos["Contacto"+i] = contactoGuardar;
+function guardar (nombreContacto, apellidoContacto, teléfonoContacto, ciudadContacto, direccionContacto) {
+    listaContactos["Contacto"+i] = {nombre: nombreContacto, apellidos:apellidoContacto, telefono:teléfonoContacto, ubicacion:{ciudad:ciudadContacto, direccion: direccionContacto} };
     i++;
     mostarlista();
 }
@@ -78,7 +89,7 @@ function modificar(contactoModificar, newcontac) {
 }
             
 function mostarlista() {
- contactosAmostrar = "";
+ /* contactosAmostrar = "";
     items = Object.values(listaContactos);
 
     for (let i = 1; i < items.length + 1; i++) {
@@ -87,7 +98,6 @@ function mostarlista() {
         }
                            
     } 
-    alert(contactosAmostrar);
+    alert(contactosAmostrar); */
     console.log(listaContactos)
 }
-            
