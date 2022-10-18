@@ -68,11 +68,11 @@ do {
         case 3:
             contacto = prompt("ingrese el contacto que desea Modificar");
             
-            nombreContacto = prompt("ingrese el nombre del contacto que desea editar ");
-            apellidoContacto = prompt("ingrese el apellido del contacto que desea editar");
-            teléfonoContacto = prompt("ingrese el teléfono del contacto que desea editar ");
-            ciudadContacto = prompt("ingrese la ciudad del contacto que desea editar");
-            direccionContacto = prompt("ingrese las ubicaciones del contacto que desea editar");
+            nombreContacto = prompt("ingrese el nombre del contacto que desea editar ", listaContactos[contacto]["nombre"] );
+            apellidoContacto = prompt("ingrese el apellido del contacto que desea editar",listaContactos[contacto]["apellidos"]);
+            teléfonoContacto = prompt("ingrese el teléfono del contacto que desea editar ",listaContactos[contacto]["telefono"]);
+            ciudadContacto = prompt("ingrese la ciudad del contacto que desea editar",listaContactos[contacto]["ubicacion"]["ciudad"]);
+            direccionContacto = prompt("ingrese las ubicaciones del contacto que desea editar", listaContactos[contacto]["ubicacion"]["direccion"]);
             // newcontacto = prompt("ingrese modificacion");
             modificar(contacto,nombreContacto, apellidoContacto, teléfonoContacto, ciudadContacto, direccionContacto);    
             break;
