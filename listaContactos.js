@@ -6,6 +6,11 @@ let i = 5 ;
 let items = 0;
 let fin = "";
 
+let nombreContacto = "";
+let apellidoContacto = "";
+let teléfonoContacto = "";
+let ciudadContacto = "";
+let direccionContacto = "";
 
 const listaContactos = {
     Contacto1 : {nombre: "Luis antonio",
@@ -62,8 +67,14 @@ do {
             break;
         case 3:
             contacto = prompt("ingrese el contacto que desea Modificar");
-            newcontacto = prompt("ingrese modificacion");
-            modificar(contacto, newcontacto);    
+            
+            nombreContacto = prompt("ingrese el nombre del contacto que desea editar ");
+            apellidoContacto = prompt("ingrese el apellido del contacto que desea editar");
+            teléfonoContacto = prompt("ingrese el teléfono del contacto que desea editar ");
+            ciudadContacto = prompt("ingrese la ciudad del contacto que desea editar");
+            direccionContacto = prompt("ingrese las ubicaciones del contacto que desea editar");
+            // newcontacto = prompt("ingrese modificacion");
+            modificar(contacto,nombreContacto, apellidoContacto, teléfonoContacto, ciudadContacto, direccionContacto);    
             break;
     }
                 
@@ -83,8 +94,12 @@ function eliminar(contactoEliminar) {
     mostarlista();
 }
             
-function modificar(contactoModificar, newcontac) {
-    listaContactos[contactoModificar] = newcontac;
+function modificar(contactoModificar, nombreContacto, apellidoContacto, teléfonoContacto, ciudadContacto, direccionContacto) {
+    listaContactos[contactoModificar]["nombre"] = nombreContacto;
+    listaContactos[contactoModificar]["apellidos"] = apellidoContacto;
+    listaContactos[contactoModificar]["telefono"] = teléfonoContacto;
+    listaContactos[contactoModificar]["ubicacion"]["ciudad"] = ciudadContacto;
+    listaContactos[contactoModificar]["ubicacion"]["direccion"] = direccionContacto;
     mostarlista();
 }
             
